@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Kufam } from "next/font/google";
 import "./globals.css";
+import WhatsAppIcon from "@/components/whatsappIco";
+import Nav from "@/components/nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Kufam({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir="rtl">
+      <body className={inter.className}>
+        <WhatsAppIcon phone="+966563385548" />
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
