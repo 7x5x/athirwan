@@ -19,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={inter.className}>
-        <WhatsAppIcon phone="+966563385548" />
+        <WhatsAppIcon phone="+966509294237" />
+
         <Nav />
         {children}
       </body>
